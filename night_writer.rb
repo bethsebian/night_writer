@@ -35,13 +35,22 @@ class NightWriter
     line2 = Array.new
     line3 = Array.new
 
+    capitals_and_nos = Array.new
+    capitals_and_nos = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",1,2,3,4,5,6,7,8,9,0]
+
     translate.map do |i|
       line1.push(i[0])
       line1.push(i[1])
+      line1.push(i[6])
+      line1.push(i[7])
       line2.push(i[2])
       line2.push(i[3])
+      line2.push(i[8])
+      line2.push(i[9])
       line3.push(i[4])
       line3.push(i[5])
+      line3.push(i[10])
+      line3.push(i[11])
     end
 
     line1 = line1.join
@@ -50,8 +59,7 @@ class NightWriter
 
     "#{line1}\n#{line2}\n#{line3}"
 
-    end
-
+  end
   # def echo
   #   "#{machine(@input)}\n#{machine(@input)}\n#{machine(@input)}"
   # end
